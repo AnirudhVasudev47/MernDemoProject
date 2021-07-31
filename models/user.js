@@ -9,7 +9,7 @@ let userSchema = new mongoose.Schema({
             maxlength: 32,
             trim: true,
         },
-        lastName: {
+        lastname: {
             type: String,
             maxlength: 32,
             trim: true,
@@ -20,7 +20,7 @@ let userSchema = new mongoose.Schema({
             trim: true,
             unique: true,
         },
-        userInfo: {
+        userinfo: {
             type: String,
             trim: true,
         },
@@ -37,7 +37,7 @@ let userSchema = new mongoose.Schema({
             type: Array,
             default: [],
         }
-    }, {timestamp: true}
+    }, {timestamps: true}
 );
 
 userSchema.virtual("password")
